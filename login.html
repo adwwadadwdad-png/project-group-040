@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบเข้าสู่ระบบ - Project Group 040</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>เข้าสู่ระบบ</h1>
+        <form id="loginForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้" required>
+            </div>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่าน" required>
+            </div>
+            <button type="submit" class="btn-login">เข้าสู่ระบบ</button>
+        </form>
+        <p class="register-link">ยังไม่มีบัญชี? <a href="#">สมัครสมาชิก</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username && password) {
+                alert('กำลังเข้าสู่ระบบ...');
+                // TODO: เชื่อมต่อ API สำหรับการยืนยันตัวตน
+            }
+        });
+    </script>
+</body>
+</html>
